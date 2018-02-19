@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="1284" y="58"/>
         </scene>
-        <!--View Controller-->
+        <!--Emoji Definition View Controller-->
         <scene sceneID="3uE-pM-l52">
             <objects>
-                <viewController id="NES-gv-vtn" sceneMemberID="viewController">
+                <viewController id="NES-gv-vtn" customClass="EmojiDefinitionViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FgY-pS-Ovb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
