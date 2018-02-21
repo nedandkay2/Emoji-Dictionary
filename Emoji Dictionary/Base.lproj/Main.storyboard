@@ -58,8 +58,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-lk-Gax">
-                                <rect key="frame" x="10" y="657" width="355" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Racecar sponsered by Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-lk-Gax">
+                                <rect key="frame" x="10" y="635.5" width="355" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Transportation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTD-IH-BaS">
+                                <rect key="frame" x="91" y="571" width="192" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year 2013" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2G-Kd-GIe">
+                                <rect key="frame" x="106" y="606" width="177" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,14 +80,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VUz-uc-bhf" firstAttribute="bottom" secondItem="fgg-lk-Gax" secondAttribute="bottom" constant="10" id="2nc-0t-KoL"/>
+                            <constraint firstItem="fgg-lk-Gax" firstAttribute="top" secondItem="L2G-Kd-GIe" secondAttribute="bottom" constant="8.5" id="B1y-gw-Uwj"/>
+                            <constraint firstItem="sTD-IH-BaS" firstAttribute="leading" secondItem="VUz-uc-bhf" secondAttribute="leading" constant="91" id="Hqx-44-Uct"/>
                             <constraint firstItem="ANy-8f-X1b" firstAttribute="top" secondItem="VUz-uc-bhf" secondAttribute="top" constant="20" id="TqX-KF-D7B"/>
+                            <constraint firstItem="L2G-Kd-GIe" firstAttribute="top" secondItem="sTD-IH-BaS" secondAttribute="bottom" constant="14" id="U8J-eE-mzd"/>
                             <constraint firstItem="fgg-lk-Gax" firstAttribute="leading" secondItem="VUz-uc-bhf" secondAttribute="leading" constant="10" id="VkC-IW-TKx"/>
+                            <constraint firstItem="sTD-IH-BaS" firstAttribute="top" secondItem="ANy-8f-X1b" secondAttribute="bottom" constant="228" id="YR6-Wl-eSs"/>
+                            <constraint firstItem="VUz-uc-bhf" firstAttribute="trailing" secondItem="sTD-IH-BaS" secondAttribute="trailing" constant="92" id="aRN-hN-OrB"/>
+                            <constraint firstItem="L2G-Kd-GIe" firstAttribute="leading" secondItem="VUz-uc-bhf" secondAttribute="leading" constant="106" id="dqW-4S-q1F"/>
+                            <constraint firstItem="VUz-uc-bhf" firstAttribute="trailing" secondItem="L2G-Kd-GIe" secondAttribute="trailing" constant="92" id="gY3-47-GSG"/>
                             <constraint firstItem="ANy-8f-X1b" firstAttribute="centerX" secondItem="FgY-pS-Ovb" secondAttribute="centerX" id="idb-Rk-Fi6"/>
                             <constraint firstItem="VUz-uc-bhf" firstAttribute="trailing" secondItem="fgg-lk-Gax" secondAttribute="trailing" constant="10" id="t3k-LH-BpN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VUz-uc-bhf"/>
                     </view>
                     <connections>
+                        <outlet property="birthLabel" destination="L2G-Kd-GIe" id="nSk-vG-Qd0"/>
+                        <outlet property="categoryLabel" destination="sTD-IH-BaS" id="GOj-c7-Kfu"/>
                         <outlet property="emojiDefinitionLabel" destination="fgg-lk-Gax" id="6ky-Js-zej"/>
                         <outlet property="emojiLabel" destination="ANy-8f-X1b" id="uKm-cG-ujo"/>
                     </connections>
