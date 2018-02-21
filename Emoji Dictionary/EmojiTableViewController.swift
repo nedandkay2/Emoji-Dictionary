@@ -10,10 +10,13 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
 
-    var emojis = ["♞","⚽️","🐥","😀", "⛪️","🚘", "🤠", "🍒", "✈️", "⏰", "🇨🇦",]
+    // create the array emojis
+    var emojis  : [Emoji] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // emojis array is populated by the createEmojis func
+        emojis = createEmojis()
 
     }
 
@@ -27,10 +30,13 @@ class EmojiTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = emojis[indexPath.row]
+        
+        let emoji = emojis[indexPath.row]
+        
+        cell.textLabel?.text = "\(emoji.theEmoji) - \(emoji.category)"
         
         return cell
-        
+    
     
     }
     
@@ -45,7 +51,25 @@ class EmojiTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let emojiDefVC = segue.destination as! EmojiDefinitionViewController
-        emojiDefVC.emoji = sender as! String
+        emojiDefVC.emoji = sender as! Emoji
+    }
+    
+    // this function returns information from the Emoji class properties
+    func createEmojis() -> [Emoji] {
+        
+        let knight = Emoji()
+        knight.theEmoji = "♞"
+        knight.def = "A powerful chess piece"
+        knight.birthYear = 1230
+        knight.category = "Games"
+        
+        let church =  Emoji()
+        church.theEmoji = "⛪️"
+        church.def = "A lovely Church"
+        church.birthYear = 1963
+        church.category = "Buildings"
+        
+        return [knight, church]
     }
  
 }
